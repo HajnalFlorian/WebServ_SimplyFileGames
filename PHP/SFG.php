@@ -15,25 +15,25 @@
 			$this->file_comment_path=$this->data_folder_path.$new_comment_file_path;
 		}
 
-		function Install($gameId,$password){
-			$this->InitConfig($gameId,$password);
-			$this->Reinstall($password);
+		function Install($gameId,$mdp){
+			$this->InitConfig($gameId,$mdp);
+			$this->Reinstall($mdp);
 		}
 
-		function Reinstall($password){
+		function Reinstall($mdp){
 			if(file_exists($this->file_config_path)){
 				$file_content_array = $this->get_file_json_as_object($this->file_config_path);
-				if($password==$file_content_array["password"]){
+				if($mdp==$file_content_array["password"]){
 					$this->InitScore($file_content_array['gameId']);
 					$this->InitComments($file_content_array['gameId']);
 				}
 			}
 		}
 
-		function InitConfig($gameId,$password){
+		function InitConfig($gameId,$mdp){
 			$data = [
 				"gameId" => $gameId,
-				"password" => $password
+				"password" => $mdp
 			];
 
 			$this->check_file($this->file_config_path,$data);
@@ -146,9 +146,9 @@
 
 		}
 
-		function __call($name_of_function, $arguments) {
+		function __call($FunctionName, $arguments) {
 
-			if($name_of_function == 'AddInfo') {n
+			if($FunctionName == 'AddInfo') {n
 				switch (count($arguments)) {
 					case 4:
 						$file_content_array = $this->get_file_json_as_object($this->file_score_path);
