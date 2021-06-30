@@ -21,9 +21,8 @@
 				<input type="password" id="password"/>';
 
 		echo'<input type="button" id="InstallButton" value="Install" onclick=\'InstallSFG()\'/>';
-
 		echo'</form>';
-				
+
 		echo'</fieldset>';
 	}
 
@@ -49,6 +48,7 @@
 		echo '</article>';
 
 		echo '</section>';
+	}
 
 	function PrintHighscoresPage(){
 
@@ -83,6 +83,7 @@
 			 </div>';
 	}
 
+
 	function PrintCommentsPage(){
 
 		echo '<h1>Simply File Games</h1>';
@@ -116,34 +117,48 @@
 			 </div>';
 	}
 
+
 	function PrintResetPage(){
+
 
 		echo '<h1>Simply File Games</h1>';
 
+
 		echo'<fieldset id="Install">';
+
 
 		echo'<legend id="instalLegend">
 			 Réinstallation
 			 </legend>';
 
+
 		echo'<form class="MainFormulaire">';
 
+
 		echo'<label id="labelGameId" for="gameId">Nom de votre jeu : </label>';
+
 		if(file_exists('./data/config.json')){
+
 			$file_content_json = file_get_contents('./data/config.json');
+
 			$file_content_array = json_decode($file_content_json,true);
+
 			echo $file_content_array['gameId'];
 		}else{
 			echo "Pas de jeu répertorié.";
 		}
 		echo'<br/>';
+
 		echo'<label for="password">Mot de passe :</label>
 			 <span id="errorPassword"></span>
 			 <input type="password" id="password"/>';
 
+
 		echo '<input type="button" id="InstallButton" value="Install" onclick=\'ReinstallSFG()\'/>';
+		
 
 		echo'</form>';
+
 
 		echo'</fieldset>';
 	}
