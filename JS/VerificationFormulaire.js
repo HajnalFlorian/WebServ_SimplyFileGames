@@ -68,11 +68,11 @@ function VerifFormulaireInstall() {
     var FromValide = true;
 
     var gameId = document.getElementById("gameId").value;
-    var password = document.getElementById("password").value;
+    var mdp = document.getElementById("mdp").value;
 
 
     var ErreurGameId = document.getElementById("errorGameId");
-    var ErreurPassword = document.getElementById("errorPassword");
+    var ErreurMdp = document.getElementById("errorPassword");
 
     ErreurGameId.innerHTML = "";
     ErreurPassword.innerHTML = "";
@@ -96,12 +96,12 @@ function VerifFormulaireReinstall() {
 
     var password = document.getElementById("password").value;;
 
-    var ErreurPassword = document.getElementById("errorPassword");
+    var ErreurMdp = document.getElementById("errorPassword");
 
     ErreurPassword.innerHTML = "";
 
 
-    if (password == "") {
+    if (mdp == "") {
         ErreurPassword.innerHTML = "Veuillez entrer un mot de passe";
         FromValide = false;
     }

@@ -11,13 +11,13 @@ class SFG extends EventTarget{
     }
 
     //fonction permettant d'installer SFG
-    Install(gameId,password) {
+    Install(gameId,mdp) {
 
         if (VerifFormulaireInstall()) {
             var datasJSON = {
                 'action': "install",
                 'gameId': gameId,
-                'password': password
+                'password': mdp
             };
 
 
@@ -43,12 +43,12 @@ class SFG extends EventTarget{
     }
 
 
-    Reinstall(password) {
+    Reinstall(mdp) {
 
         if (VerifFormulaireReinstall()) {
             var datasJSON = {
                 'action': "reinstall",
-                'password': password
+                'password': mdp
             };
 
 
