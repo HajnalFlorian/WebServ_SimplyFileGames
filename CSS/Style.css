@@ -1,0 +1,83 @@
+﻿/*modification du CSS des objets body*/
+body {
+    background: url(../Images/MainBackground.gif) fixed no-repeat center;
+    background-size: 100% 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 7vh;
+}
+
+h1,h2, h3 {
+    text-decoration: underline;
+    color: white;
+}
+
+
+fieldset, article {
+    color: white;
+    margin-top: 100px;
+    margin-left: 25vw;
+    text-align:left;
+}
+
+td {
+    color: white;
+    background-color: black;
+    border: solid 2px #67126e;
+    width: 50%;
+}
+
+th {
+    color: white;
+    background-color: black;
+    border: solid 2px #67126e;
+    width: 100%;
+}
+
+table {
+    width: 25vw;
+    margin-left: 37.5vw;
+    margin-top: 10px;
+}
+
+span{
+    color:red;
+    display:inline-block;
+}
+
+
+input {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+textarea {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ErrorPrint {
+    background-color: black;
+    border: solid 2px #67126e;
+    width: 25%;
+    text-align: center;
+}
+
+p{
+    margin-left:0.5vw;
+}
+
+
+.navLink:link {
+
+    color: white;
+}
+
+
+nav {
+    display: inline-block;
+    text-align: center;
+}
